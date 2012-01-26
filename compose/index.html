@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+	<title>WordPress - Compose</title>
+	<!-- You must download the enyo framework and dump it into a folder named framework or update
+	src to point to the correct path -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale = 1.0, user-scalable = no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+  <script src="..//enyo/framework/enyo.js" type="text/javascript" launch="nobridge"></script>
+<script type="text/javascript">
+function toggle(obj) {
+	var el = document.getElementById(obj.id);
+	var curClass = el.className;
+	
+	if (curClass.search('btnActive') > -1)
+		el.className = 'formatBtn';
+	else
+		el.className = 'formatBtn btnActive';
+}
+</script>
+  <!--<script src="/usr/palm/frameworks/enyo/0.9/framework/enyo.js" type="text/javascript"></script>-->
+</head>
+<body>
+	<div id="tinyMCE">
+		<form>  
+	        <textarea id="txtEntry" name="content" style="width: 100%; height: 100%">
+				<span style="font-size: 14pt; color: black; font-family: arial;">Type text here</span>
+	        </textarea>
+	    </form>
+	</div>
+	<div id="toolbarButtons">
+		<button class="formatBtn" id="strongButton" onClick="formatBtnClickFunctionBind('bold');return false;">B</button>
+		<button class="formatBtn" type="button" id="emButton" onClick="formatBtnClickFunctionBind('italic');return false;">I</button>
+		<button class="formatBtn" type="button" id="strikethroughButton" onClick="formatBtnClickFunctionBind('strikethrough');return false;">ABC</button>
+		<button class="formatBtn" type="button" id="uButton" onClick="formatBtnClickFunctionBind('underline');return false;">U</button>
+		<div class="spacer"></div>
+		<button class="formatBtn" type="button" id="ulButton" onClick="formatBtnClickFunctionBind('insertunorderedlist');return false;"><img src="images/icon_ul.png" /></button>
+		<button class="formatBtn" type="button" id="olButton" onClick="formatBtnClickFunctionBind('insertorderedlist');return false;"><img src="images/icon_ol.png" /></button>
+		<button class="formatBtn" type="button" id="blockquoteButton" onClick="formatBtnClickFunctionBind('indent');toggle(this);return false;"><img src="images/icon_bquote.png" /></button>
+		<button class="formatBtn" type="button" id="linkButton" onClick="linkBtnClickFunctionBind()"><img src="images/icon_link.png" /></button>
+		<button class="formatBtn" type="button" id="moreButton" onClick="formatBtnClickFunctionBind('more');return false;"><img src="images/icon_more.png" /></button>
+		<div class="spacer"></div>
+		<button class="formatBtn" type="button" id="leftButton" onClick="formatBtnClickFunctionBind('justifyleft');return false;"><img src="images/icon_left.png" /></button>
+		<button class="formatBtn" type="button" id="centerButton" onClick="formatBtnClickFunctionBind('justifycenter');return false;"><img src="images/icon_center.png" /></button>
+		<button class="formatBtn" type="button" id="rightButton" onClick="formatBtnClickFunctionBind('justifyright');return false;"><img src="images/icon_right.png" /></button>
+		<div class="spacer"></div>
+		<button class="formatBtn" type="button" id="imageButton" onClick="showWebOsImageFilePickerFunctionBind()"><img src="images/icon_camera.png" /></button>
+	</div>
+<script type="text/javascript">
+  var params = enyo.windowParams;
+  console.log("The Compose Window received the following params: ", params);
+	new wp.Compose().renderInto(document.body);
+</script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+body {
+	
+}
+
+
+.desktop {
+	background: url(../../images/background.jpg) 0 0 no-repeat;
+  position:absolute; top:0; right:0; left:0; bottom:0
+}
+
+.composer {
+  position:absolute;
+  top:0;right:10%;left:10%;bottom:0;
+  background:#F9F9F9;
+  -webkit-transition: 200ms ease-in-out;
+  -webkit-transition-property: left right;
+}
+
+.composer.expanded-mode {
+  right:0;
+  left:0;
+}
+
+.wp-formatBtn {
+	display: inline;
+	width: 100px;
+}
+
+#compose_contentWrapper {
+/*	background-image: -webkit-linear-gradient(black, white);  */
+	background-color: #E4E4E4;
+	border-color: #DFDFDF;
+	border-radius: 6px 6px 0 0;
+	border-style: solid;
+	border-width: 1px;
+	margin: 2px 10px 1px 10px;
+}
+
+#compose_richTextButtons {
+	padding: 10px 6px 50px 6px;
+}
+
+#compose_titleField {
+	background-color: #FFFFFF;
+	border-radius: 6px 6px 6px 6px;
+	border-color: #DFDFDF;
+	border-style: solid;
+	border-width: 1px;
+    line-height: 100%;
+    outline: medium none;
+	margin: 10px;
+}
+
+#compose_contentField {
+	background-color: none;
+	border-radius: 6px 6px 6px 6px;
+	border-width: 6px;
+    line-height: 100%;
+    outline: medium none;
+	padding-top: 0;
+}
+
+#compose_main .enyo-input-focus { -webkit-border-image: none; }
+
+#compose_contentScroller_client {
+	background: #fff;
+	border-top: 1px solid rgba(0,0,0,.35);
+}
+
+#compose_contentField a:link{
+	color: color: #21759b !important;
+}
+
+#compose_contentField_input {
+	margin: 10px 10px 10px 6px;
+	padding-right: 20px;
+	max-width: 100%;
+}
+
+#compose_advanced {
+	margin: 10px 0 0 10px;
+	width: 100px;
+}
+
+#compose_postButton {
+	background-color: #21759b;
+	color: #FFFFFF;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+	margin-left: 20px;/*avoid fat fingers*/
+}
+
+#compose_uploadButton {
+	-webkit-border-image: none;
+	position: absolute;
+	top: 130px;
+	left: 817px;
+	font-size:8pt;
+	width: 30px;
+	height: 20px;
+	cursor: default;
+	border: 1px solid #f6f6f6;
+	-webkit-border-radius: 2px;
+	line-height: 10px;
+}
+
+#compose_uploadButton .enyo-button-down {
+	-webkit-border-image: none;
+	border: 1px solid #686868;
+}
+
+#compose_contentScroller {
+	position: relative;
+/*  z-index: 1000;
+*/}
+
+#wrapper {
+	position: absolute;
+	z-index: 1;
+	top: 45px;
+	bottom: 48px;
+	left: 0;
+	width: 100%;
+	background: #AAA;
+	overflow: auto;
+	display: block;
+}
+
+#scroller {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	-webkit-tap-highlight-color: transparent;
+	width: 100%;
+	padding: 0;
+}
+
+#strongButton {
+	font-weight: bold;
+}
+
+#emButton {
+	font-style: italic;
+}
+
+#strikethroughButton {
+	text-decoration: line-through;
+}
+
+#linkButton {
+	text-decoration: underline;
+	color: #21759b;
+}
+
+#uButton {
+	text-decoration: underline;
+}
+
+.spacer {
+	display:inline;
+	margin-right: 8px;
+}
+
+#compose_htmlContent {
+	background: #cfcfcf url(../images/html-bg.png) repeat-x 0 0;
+	padding: 5px 5px 0;
+	border-radius: 6px;
+}
+/*
+.formatBtn {
+	min-width: 36px;
+	padding: 0 14px;
+	border: 1px solid #c3c3c3;
+	background: rgba(255,255,255,1) -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(195,195,195)),color-stop(1, rgb(255,255,255)));
+	border-radius: 5px;
+	font-size: 16px;
+	line-height: 32px;
+	-webkit-box-shadow: inset 0 -1px 3px rgba(255,255,255,.65);
+	float: left;
+	margin: 0 5px 0 0;
+	text-shadow: 0 1px 0 #fff;
+}
+
+.formatBtn:active,
+.formatBtn:focus {
+	outline: none;
+	-webkit-box-shadow: inset 0 -1px 3px rgba(255,255,255,.35),inset 0 3px 7px 0 rgba(0,0,0,.65);
+	border-color: #838383;
+}*/
+
+.formatBtn {
+	background: url(../images/btn_bg.png) repeat-x;
+	border: 1px solid #ccc;
+	border-bottom-color: #aaa;
+	min-width: 36px;
+	border-radius: 5px;
+	padding: 0 8px;
+	margin: 0 0 7px;
+	font-size: 14px;
+	line-height: 32px;
+	font-family: Georgia;
+	color: #616161;
+}
+
+.formatBtn img{
+	position: relative;
+	top: 5px;
+}
+
+.btnActive {
+	background: url(../images/btn_bg_down.png) repeat-x;
+	border: 1px solid #999;
+	border-bottom-color: #777;
+}
+
+#compose_linkOKBtn{
+	width: 100px;
+	display: block;
+}
+
+#compose_dialog {
+/*  z-index: 1000;
+*/}
+
+.enyo-button {
+	text-shadow: 0 1px 0 rgba(255,255,255,1);
+}
+
+#compose_contentField a {
+	color: #21759B;
+}
+
+.more {
+	display: block;
+	height: 1px;
+	width: 100%;
+	border-bottom: 1px dotted #ccc	;
+}
+
+#compose_categoryLabel{
+	margin-left: 8px;
+}
+
+.wp-compose-spinner{
+	margin-left: 10px;
+}
+
+
+.wp-compose-error-dialog {
+  left:15%;
+  right:15%;
+  bottom:0;
+  top:0;
+  background:#FFF;
+}
+
+.wp-compose-error-detail-dialog {
+  left:15%;
+  right:15%;
+  bottom:0;
+  top:0;
+  background:#FFF;
+}
+
+.enyo-richtext-hint, #compose_titleField_input, #compose_contentField_input {
+	color: #464646;
+}
+
+input::-webkit-input-placeholder, isindex::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #464646;
+}
+
+/* tags / password text fields 
+
+#compose_settings .enyo-input {
+	border-radius: 6px;
+	background-color: white;
+	border: 1px solid #dfdfdf;
+	outline: none;
+}
+
+#compose_settings .enyo-input.enyo-input-focus {
+	border: 1px solid #dbdbdb;
+	border-top-color: #adadad;
+}
+*/
